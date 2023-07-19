@@ -1,0 +1,348 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f2f2f2;
+}
+
+header, footer {
+  background-color: maroon;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+.menu {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.menu-group-heading {
+  margin: 0;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #ccc;
+}
+
+.menu-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.menu-item {
+  display: flex;
+}
+
+.menu-item-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 1.5em;
+}
+
+.menu-item-text {
+  flex-grow: 1;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.menu-item-name {
+  margin-right: 1.5em;
+}
+
+.menu-item-description {
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    font-size: 16px;
+  }
+
+  .menu-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-item-image {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+/* Input Styles */
+input[type="text"], input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus {
+  outline: none;
+  border-color: #555;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.add-to-cart-btn {
+  background-color: #B8372D;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #8D221B;
+}
+
+.quantity-section {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity-btn {
+  background-color: #B8372D;
+  color: #FFFFFF;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-btn:hover {
+  background-color: #8D221B;
+}
+
+.quantity-value {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Add styling for "Clear Cart" and "Checkout" buttons */
+#clear-cart-btn, #checkout-btn {
+  background-color: #8B0000;
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#clear-cart-btn:hover, #checkout-btn:hover {
+  background-color: #A52A2A;
+}
+
+#checkout-message {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #8B0000;
+}
+
+#cart-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Styles for the cart table */
+#cart-items table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#cart-items th, #cart-items td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#cart-items .cart-item-image {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.delete-item-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-item-btn:hover {
+  background-color: #cc0000;
+}
+
+#cart {
+  padding: 20px;
+}
+
+#cart h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#cart table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#cart th,
+#cart td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#cart .cart-item-image {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+#cart .quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+#cart .quantity-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#cart .delete-item-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#cart .delete-item-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Add styling for "Clear Cart" and "Checkout" buttons */
+#cart #clear-cart-btn,
+#cart #checkout-btn {
+  background-color: #8B0000;
+  color: #FFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#cart #clear-cart-btn:hover,
+#cart #checkout-btn:hover {
+  background-color: #A52A2A;
+}
+
+#cart #checkout-message {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #8B0000;
+}
+
+#cart #cart-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

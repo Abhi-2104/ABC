@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Urulaikaran - Cart</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Urulaikaran</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html#menu">Menu</a></li>
+                <li><a href="about.html#about">About</a></li>
+                <li><a href="contact.html#contact">Contact</a></li>
+                <li><a href="cart.html#cart">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="cart">
+        <h2>Cart</h2>
+        <div id="cart-items">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="cart-items"></div>
+<div id="cart-details">
+            <h3>Order Details</h3>
+            <form id="order-form" action="checkout.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required><br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required><br>
+                
+                <div id="cart-options">
+                    <button id="clear-cart-btn">Clear Cart</button>
+                    <button type="submit" id="checkout-btn">Checkout</button>
+                </div>
+            </form>
+            <div id="checkout-message"></div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Urulaikaran. All rights reserved.</p>
+    </footer>
+</body>
+</html>
